@@ -1,0 +1,117 @@
+<!-- This is the Home page of the app online shopping mall -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Freak</title>
+    <link rel="stylesheet" href="css/home.css">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 1170px)" href="css/contact.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+
+            <img src="images/logo.png" alt="MyOnlineShoppingMall.com">
+        </div>
+        <ul>
+            <li><a style="float: left;" class="active" href="#"><i class="fa fa-home fa-lg"></i>Home</a></li>
+            <li><a style="float: left;" href="#services-container"><i class="fa fa-solid fa-shopping-cart"></i>Services</a></li>
+            <li><a style="float: left;" href="#contact"><i class="fa fa-phone fa-lg"></i>Contact</a></li>
+            <li><a style="float: left;" href="about.html"><i class="fa fa-user fa-lg"></i>About</a></li>
+            <li><a style="float: left;" href="cart.html"><i class="fa fa-user fa-lg"></i>Meditation</a></li>
+            <li><a style="float: left;" href="meal.html"><i class="fa fa-user fa-lg"></i>Meal plan</a></li>
+            <li style="float: right; margin-right: 30px;" class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Account</a>
+                <div class="dropdown-content">
+                    <a href="signin.html">Login</a>
+                    <a href="signup.html">Create Account</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+
+                <img class="img-slider" src="images/background1.jpeg" style="width:100%; height:550px">
+                <div class="text">
+                    <h1 class="h-primary">Build the body of your dreams</h1>
+                    <p>Choose from hundreds of workouts, healthy recipes, relaxing meditations, and expert articles,  </p>
+                    <p>for a whole body and mind approach to feeling great..</p>
+                    <a href="addtocart.html" class="btn">Join Now</a>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="img-slider" src="images/final background.jpeg" style="width:100%; height:550px">
+                <div class="text">
+                    <h1 class="h-primary">You are stronger than you think</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis dolorum numquam minus. </p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. </p>
+                    <a href="addtocart.html" class="btn">Join Now</a>
+                </div>
+            </div>
+
+           
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+    </section>
+    <section id="services-container">
+        <iframe src="services.html" style="border:none;" height="1000x" width="100%" title="Services"></iframe>
+    </section>
+    <section id="contact">
+        <iframe src="contact.html" style="border:none;" height="700px" width="100%" title="Contact Us"></iframe>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.fitnessfreak.com. All rights reserved!
+        </div>
+    </footer>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+</html>

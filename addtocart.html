@@ -1,0 +1,262 @@
+<!-- Add Items to the Cart. This Page comes on clicking order now button in home screen. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout programs</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Information Modal</title>
+    <style>
+       
+
+        body {
+            font-family: Arial;
+            font-size: 17px;
+            background-image: none;
+        }
+
+        .container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+            .container img {
+                vertical-align: middle;
+            }
+
+            .container .content {
+                position: absolute;
+                bottom: 0;
+                background: rgb(0, 0, 0);
+                /* Fallback color */
+                background: rgba(0, 0, 0, 0.5);
+                /* Black background with 0.5 opacity */
+                color: black;
+                width: 100%;
+                padding: 20px;
+            }
+
+        .products {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 30px;
+            margin: 40px;
+        }
+        .btn {
+            display: inline-block; /* Makes the link behave like a button */
+            background-color: black; /* Purple background */
+            color: white; /* White text color */
+            padding: 15px 30px; /* Padding around the text */
+            text-align: center; /* Center text alignment */
+            text-decoration: none; /* Remove underline from link */
+            border-radius: 25px; /* Rounded corners */
+            font-size: 16px; /* Font size */
+            font-weight: bold; /* Bold text */
+            transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+            .btn:hover {
+                background-color: darkred; /* Darker purple on hover */
+                transform: translateY(-2px); /* Slight lift effect on hover */
+            }
+
+
+
+        .button2 {
+            background-color: #008CBA;
+            color: black;
+            border: 2px solid #008CBA;
+            color: white;
+        }
+
+            .button2:hover {
+                background-color: white;
+                color: black;
+            }
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+        }
+
+        .modal-content {
+            background-color: black
+                ;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Could be more or less, depending on screen size */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        .close {
+            color: red;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+
+            <img src="images/logo.png" alt="MyOnlineShoppingMall.com">
+        </div>
+        <ul>
+            <li><a style="float: left;" class="active" href="index.html"><i class="fa fa-home fa-lg"></i>Home</a></li>
+            <li><a style="float: left;" href="index.html#services-container"><i class="fa fa-solid fa-shopping-cart"></i>Services</a></li>
+            <li><a style="float: left;" href="index.html#contact"><i class="fa fa-phone fa-lg"></i>Contact</a></li>
+            <li><a style="float: left;" href="about.html"fa fa-user fa-lg"></i>About</a></li>
+            <li><a style="float: left;" href="cart.html"><i class="fa fa-user fa-lg"></i>Meditation</a></li>
+            <li><a style="float: left;" href="meal.html"><i class="fa fa-user fa-lg"></i>Meal plan</a></li>
+            <li style="float: right; margin-right: 30px;" class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Account</a>
+                <div class="dropdown-content">
+                    <a href="signin.html">Login</a>
+                    <a href="signup.html">Create Account</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="products">
+        <div class="container">
+            <img src="images/cardio.jpg" alt="Notebook" style="width:100%;">
+            <div class="content">
+                <h1> Low-Impact Cardio</h1>
+                <p>improve strenght, lower blood pressure </p>
+                <p><strong>Calories Burned:</strong> 250-350 kcal</p>
+                <p><strong>Heart Rate:</strong> 120-150 bpm</p>
+                <p><strong>Difficulty Level:</strong> Easy to Moderate</p>
+                <p><strong>Training Type:</strong> whole body</p>
+
+
+                <a href="signup.html" class="btn">start Now</a>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+        <div class="container">
+            <img src="images/body.jpg" alt="Notebook" style="width:100%;">
+            <div class="content">
+                <h1>BodyWeight Strength</h1>
+                <p>strenghten your body </p>
+
+                <p><strong>Calories Burned:</strong> 250-350 kcal</p>
+                <p><strong>Heart Rate:</strong> 120-150 bpm</p>
+                <p><strong>Difficulty Level:</strong> Easy to Moderate</p>
+                <p><strong>Training Type:</strong> whole body</p>
+                <a href="signup.html" class="btn">start Now</a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="container">
+            <img src="images/lowbody.png" alt="Notebook" style="width:100%;">
+            <div class="content">
+                <h1>Total Body Low Impact Strength</h1>
+
+
+                <p><strong>Calories Burned:</strong> 200-250 kcal</p>
+                <p><strong>Heart Rate:</strong> 120-180 bpm</p>
+                <p><strong>Difficulty Level:</strong> Easy to Moderate</p>
+                <p><strong>Training Type:</strong> calf strenthening</p>
+                <a href="signup.html" class="btn">start Now</a>
+            </div>
+
+        </div>
+        <div class="container">
+            <img src="images/sadia2.jpg" alt="Notebook" style="width:100%;">
+            <div class="content">
+                <h1>Bodyweight Cardio Hiit</h1>
+                <p>strenghten your body </p>
+
+                <p><strong>Calories Burned:</strong> 200-250 kcal</p>
+                <p><strong>Heart Rate:</strong> 120-160 bpm</p>
+                <p><strong>Difficulty Level:</strong> Easy to Moderate</p>
+                <p><strong>Training Type:</strong>  strenthening</p>
+                <a href="signup.html" class="btn">start Now</a>
+            </div>
+
+        </div>
+        <div class="container">
+            <img src="images/work2.png" alt="Notebook" style="width:100%;">
+            <div class="content">
+                <h1>Lower Body,Upper Body, and Weighted Core Strength</h1>
+
+                <p><strong>Calories Burned:</strong> 200-250 kcal</p>
+                <p><strong>Heart Rate:</strong> 120-160 bpm</p>
+                <p><strong>Difficulty Level:</strong> Easy to Moderate</p>
+                <p><strong>Training Type:</strong>  strenthening</p>
+                <a href="signup.html" class="btn">start Now</a>
+            </div>
+        </div>
+        <div class="container">
+            <img src="images/quick.jpg" alt="Notebook" style="width:100%;">
+            <div class="content">
+                <h1>Quick and effective Lower Body Strength</h1>
+
+                <p><strong>Calories Burned:</strong> 220-400 kcal</p>
+                <p><strong>Heart Rate:</strong> 120-180 bpm</p>
+                <p><strong>Difficulty Level:</strong> Easy to Moderate</p>
+                <p><strong>Training Type:</strong> shaping</p>
+                <a href="signup.html" class="btn">start Now</a>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.fitnessfreak.com. All rights reserved!
+        </div>
+    </footer>
+
+</body>
+
+</html>

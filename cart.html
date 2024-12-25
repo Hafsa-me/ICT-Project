@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga and Mental Health Sessions</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/cart.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /*style for nev bar*/
+        /* General Styles for the Navigation Bar */
+        ul {
+            display: flex; /* Use flexbox for layout */
+            list-style-type: none; /* Remove bullet points */
+            margin: 0; /* Remove default margins */
+            padding: 10px; /* Padding around the list */
+            background-color: #333; /* Dark background color for the nav bar */
+        }
+
+        li {
+            position: relative; /* Needed for dropdown positioning */
+        }
+
+            /* Link Styles */
+            li a {
+                display: inline-block; /* Make links behave like block elements */
+                color: white; /* White text color */
+                text-align: center; /* Center text alignment */
+                padding: 14px 16px; /* Padding around link text */
+                text-decoration: none; /* Remove underline from links */
+                transition: background-color 0.3s ease; /* Smooth transition on hover */
+            }
+
+                li a:hover {
+                    background-color: #555; /* Lighter background on hover */
+                }
+
+        .active {
+            background-color: #007bff; /* Active link color (blue) */
+        }
+
+        /* Dropdown Styles */
+        li.dropdown {
+            display: inline-block; /* Display dropdown as inline-block */
+        }
+
+        .dropdown-content {
+            display: none; /* Hide dropdown content by default */
+            position: absolute; /* Position it below the dropdown button */
+            background-color: #f9f9f9; /* Light background for dropdown items */
+            min-width: 150px; /* Minimum width for dropdown items */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Shadow effect for dropdown */
+            z-index: 1; /* Ensure dropdown is above other content */
+        }
+
+            /* Dropdown item styles */
+            .dropdown-content a {
+                color: black; /* Text color for dropdown items */
+                padding: 12px 16px; /* Padding around dropdown item text */
+                text-decoration: none; /* Remove underline from links in dropdown */
+                display: block; /* Make dropdown items block elements */
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #ddd; /* Background color on hover for dropdown items */
+                }
+
+        /* Show dropdown on hover over parent li element */
+        .dropdown:hover .dropdown-content {
+            display: block; /* Show dropdown when hovering over parent li */
+        }
+
+    /* General Styles */
+    body {
+    font-family: Arial, sans-serif;
+    background-image:url('images/yogaw.jpg'); /* Light blue background */
+    color: #333; /* Dark text color for readability */
+    margin: 0;
+    padding: 0;
+    }
+
+    /* Container Styles */
+    .container {
+    max-width: 800px; /* Maximum width of the container */
+    margin: 20px auto; /* Center the container with margin */
+    padding: 20px; /* Padding around the content */
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    }
+
+    /* Section Styles */
+    .yoga-plan, .mental-health {
+    margin-bottom: 30px; /* Space between sections */
+    padding: 15px; /* Padding inside each section */
+    border: 1px solid #ddd; /* Light gray border around sections */
+    border-radius: 8px; /* Rounded corners for sections */
+    }
+
+    h2 {
+    font-size: 24px; /* Font size for section headings */
+    color: black; /* Blue color for headings */
+    }
+
+    p {
+    font-size: 16px; /* Font size for paragraphs */
+    line-height: 1.5; /* Line height for better readability */
+    }
+
+    ul {
+    list-style-type: disc; /* Bulleted list style */
+    padding-left: 20px; /* Indentation for list items */
+    }
+
+    /* Button Styles */
+    .button {
+    display: inline-block;
+    background-color: #6200ea; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around button text */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    font-size: 16px; /* Font size for button text */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    }
+
+    .button:hover {
+    background-color: #3700b3; /* Darker shade on hover */
+    }
+    .container {
+    padding: 10px; /* Reduced padding to make the container smaller */
+    font-size: 16px; /* Ensure text is still readable */
+    color: #333; /* Neutral text color */
+}
+
+.container h2 {
+    color: #2c3e50; /* Darker color for headers */
+    margin-bottom: 10px; /* Slightly less space below headers */
+}
+
+.container ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.container ul li {
+    background-color: #f5f5f5; /* Light grey background for text visibility */
+    color: #791515; /* Dark grey text for contrast */
+    padding: 8px; /* Reduced padding inside each list item */
+    margin-bottom: 5px; /* Add smaller spacing between list items */
+    border-radius: 5px; /* Optional: Rounded corners for each item */
+}
+
+.mental-health p,
+.yoga-plan p {
+    color: #555; /* Ensure text contrasts against the background */
+    margin-bottom: 8px; /* Reduced spacing between paragraphs */
+}
+
+
+    /* Input styles for form elements */
+    input[type="text"],
+    input[type="email"] {
+    width: calc(100% - 22px); /* Full width minus padding/border */
+    padding: 10px; /* Padding inside input fields */
+    margin-top: 5px; /* Space above input fields */
+    margin-bottom: 15px; /* Space below input fields */
+    border-radius: 5px; /* Rounded corners for inputs */
+    border: 1px solid #ccc; /* Light gray border for inputs */
+    }
+    </style>
+
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">
+
+            <img src="images/logo.png" alt="MyOnlineShoppingMall.com">
+        </div>
+        <ul>
+            <li><a style="float: left;" class="active" href="index.html"><i class="fa fa-home fa-lg"></i>Home</a></li>
+            <li><a style="float: left;" href="index.html#services-container"><i class="fa fa-solid fa-shopping-cart"></i>Services</a></li>
+            <li><a style="float: left;" href="index.html#contact"><i class="fa fa-phone fa-lg"></i>Contact</a></li>
+            <li><a style="float: left;" href="about.html"fa fa-user fa-lg"></i>About</a></li>
+            <li><a style="float: left;" href="#"><i class="fa fa-user fa-lg"></i>Meditation</a></li>
+            <li><a style="float: left;" href="meal.html"><i class="fa fa-user fa-lg"></i>Meal plan</a></li>
+            <li style="float: right; margin-right: 30px;" class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Account</a>
+                <div class="dropdown-content">
+                    <a href="signin.html">Login</a>
+                    <a href="signup.html">Create Account</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="yoga-plan">
+            <h2>Yoga Plan</h2>
+            <p>Join our yoga classes to improve your physical and mental well-being. Check out our schedule:</p>
+            <ul>
+                <li>Monday - Hatha Yoga at 6 PM</li>
+                <li>Wednesday - Vinyasa Flow at 7 PM</li>
+                <li>Friday - Restorative Yoga at 5 PM</li>
+            </ul>
+        </div>
+
+        <div class="mental-health">
+            <h2>Mental Health Sessions</h2>
+            <p>Book a free slot for our mental health Zoom sessions:</p>
+            <p>Monday - Hatha Yoga at 6 PM</p>
+            <p>Wednesday - Vinyasa Flow at 7 PM</p>
+            <p>Friday - Restorative Yoga at 5 PM</p>
+
+            <!-- Optional: Add a simple form for booking -->
+            <form action="submit_booking.php" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <a href="zoom.html" class="button">Reserve now</a>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

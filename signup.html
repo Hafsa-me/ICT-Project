@@ -1,0 +1,148 @@
+<!-- This is the user registration form -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        body {
+            background-position: top center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            height: 50vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+       
+
+        /* Form container styling */
+        .my-form {
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .my-form h1 {
+            margin-bottom: px;
+            font-size: 24px;
+            color: #333;
+            text-shadow: 1px 1px #aaa;
+        }
+
+        /* Styling for input fields */
+        .font-awesome-library {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .font-awesome-library label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            text-align: left;
+        }
+
+        
+        .input-box {
+            width: 100%; /* Adjusted width to 100% */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        /* Positioning icons */
+        .font-awesome-library i {
+            position:absolute;
+            left: 5%;
+            top: 50%;
+            /* transform: translateY(-50%); */
+            color: #999;
+        }
+
+        /* Styling the submit button */
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a style="float: left;" class="active" href="index.html"><i class="fa fa-home fa-lg"></i>Home</a></li>
+        <li><a style="float: left;" href="index.html#services-container"><i class="fa fa-solid fa-shopping-cart"></i>Services</a></li>
+        <li><a style="float: left;" href="index.html#contact"><i class="fa fa-phone fa-lg"></i>Contact</a></li>
+        <li><a style="float: left;" href="#"><i class="fa fa-user fa-lg"></i>About</a></li>
+        <li><a style="float: left;" href="cart.html"><i class="fa fa-user fa-lg"></i>meditation</a></li>
+        <li><a style="float: left;" href="meal.html"><i class="fa fa-user fa-lg"></i>Meal plan</a></li>
+
+        <li style="float: right; margin-right: 30px;" class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Account</a>
+            <div class="dropdown-content">
+                <a href="signin.html">Login</a>
+                <a href="signup.html">Create Account</a>
+            </div>
+        </li>
+    </ul>
+    <div class="my-form">
+        <form>
+            <h1>Create an Account</h1>
+            <div class="font-awesome-library">
+                <label for="name" class="form-label">Name</label><br>
+                <input type="text" id="name" name="name" class="input-box" placeholder="Enter Name"><br>
+                <i class="fa fa-user fa-lg"></i>
+            </div>
+            <div class="font-awesome-library">
+                <label for="email" class="form-label">Email</label><br>
+                <input type="email" id="email" name="email" class="input-box" placeholder="Enter Email"><br>
+                <i class="fa fa-envelope fa-lg"></i>
+            </div>
+            <div class="font-awesome-library">
+                <label for="password" class="form-label">Password</label><br>
+                <input type="password" id="password" name="password" class="input-box" placeholder="Enter Password"><br>
+                <i class="fa fa-key fa-lg"></i>
+            </div>
+            <div class="font-awesome-library">
+                <label for="cPassword" class="form-label">Confirm Password</label><br>
+                <input type="password" id="cPassword" name="cPassword" class="input-box"
+                    placeholder="Enter Password Again">
+                    <i class="fa fa-key fa-lg"></i>
+            </div>
+        </form>
+        <button type="button" class="form-btn">Sign Up</button>
+        <p>Already have an account? <a href="signin.html">Sign In</a> </p>
+    </div>
+
+</body>
+
+</html>

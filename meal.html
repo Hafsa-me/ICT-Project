@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Quiz</title>
+    <link rel="stylesheet" href="newmealform.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        /* Add this CSS to hide the result section by default */
+        #result {
+            display: none; /* Hide results initially */
+        }
+        /* General Styles */
+        body {
+           
+            font-family: Arial, sans-serif;
+            background-image:url(images/meal\ plan.avif) ; /* Path to your background image */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the image */
+            color: #333; /* Dark text color for readability */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px; /* Maximum width of the container */
+            margin: auto; /* Center the container */
+            padding: 20px; /* Padding around the content */
+            background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+            position: relative; /* Positioning context for absolute elements */
+        }
+
+            /* Background Image for the Form Container */
+            .container::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: url('fitness2.jpg'); /* Path to your background image */
+                background-size: cover; /* Cover the entire container */
+                opacity: 0.3; /* Adjust opacity for better text readability */
+                z-index: -1; /* Send it behind other content */
+            }
+
+        h1 {
+            text-align: center; /* Center the heading */
+            color:black; /* Blue color for the heading */
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column; /* Stack form elements vertically */
+        }
+
+        .question {
+            margin-bottom: 15px; /* Space between questions */
+        }
+
+        label {
+            margin-bottom: 5px; /* Space below labels */
+        }
+
+        input[type="number"], input[type="radio"] {
+            padding: 10px; /* Padding inside input fields */
+            border-radius: 5px; /* Rounded corners for inputs */
+            border: 1px solid #ccc; /* Light gray border */
+        }
+
+        /* Button Styles */
+        button {
+            padding: 10px;
+            background-color: black; /* Blue background for button */
+            color: white; /* White text color for button */
+            border: none; /* No border for button */
+            border-radius: 5px; /* Rounded corners for button */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+            button:hover {
+                background-color: #0056b3; /* Darker blue on hover */
+            }
+
+        /* Result Styles */
+        #result {
+            margin-top: 20px; /* Space above results section */
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #e7f3fe; /* Light blue background for results section */
+        }
+
+        /* Recommendation Styles */
+        #mealRecommendations, #exerciseRecommendations {
+            margin-top: 15px;
+        }
+        ul {
+            display: flex;
+            list-style-type:symbols();
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+            top: 0;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+            li a:hover, .dropdown:hover .dropbtn {
+                background-color: black;
+            }
+
+        .active {
+            background-color: black;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <nav id="navbar">
+        <div id="logo">
+
+            <img src="images/logo.png" alt="MyOnlineShoppingMall.com">
+        </div>
+        <ul>
+            <li><a style="float: left;" class="active" href="index.html"><i class="fa fa-home fa-lg"></i>Home</a></li>
+            <li><a style="float: left;" href="index.html#services-container"><i class="fa fa-solid fa-shopping-cart"></i>Services</a></li>
+            <li><a style="float: left;" href="index.html#contact"><i class="fa fa-phone fa-lg"></i>Contact</a></li>
+            <li><a style="float: left;" href="about.html"fa fa-user fa-lg"></i>About</a></li>
+            <li><a style="float: left;" href="cart.html"><i class="fa fa-user fa-lg"></i>Meditation</a></li>
+            <li><a style="float: left;" href="#"><i class="fa fa-user fa-lg"></i>Meal plan</a></li>
+            <li style="float: right; margin-right: 30px;" class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Account</a>
+                <div class="dropdown-content">
+                    <a href="signin.html">Login</a>
+                    <a href="signup.html">Create Account</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+        <div class="container">
+
+            <h1>Meal Recommendation</h1>
+            <form id="fitnessQuiz" onsubmit="showResults(event)">
+                <div class="question">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+
+                <div class="question">
+                    <label>Height:</label><br>
+                    <input type="radio" name="heightUnit" value="cm" checked> cm
+                    <input type="radio" name="heightUnit" value="ft"> ft
+                </div>
+                <div class="question">
+                    <label for="height">Enter Height:</label>
+                    <input type="number" id="height" name="height" required step="0.1">
+                </div>
+
+                <div class="question">
+                    <label>Weight:</label><br>
+                    <input type="radio" name="weightUnit" value="kg" checked> kg
+                    <input type="radio" name="weightUnit" value="lbs"> lbs
+                </div>
+                <div class="question">
+                    <label for="weight">Enter Weight:</label>
+                    <input type="number" id="weight" name="weight" required step="0.1">
+                </div>
+
+                <button type="submit">Get Recommendations</button>
+            </form>
+
+            <!-- Recommendations section -->
+            <div id="result">
+                <h2>Your Recommendations</h2>
+                <div id="mealRecommendations"></div>
+                <div id="exerciseRecommendations"></div>
+            </div>
+
+        </div>
+
+        <!-- JavaScript to handle form submission -->
+        <script>
+            function showResults(event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Get user input
+                const age = parseInt(document.getElementById('age').value);
+                const height = parseFloat(document.getElementById('height').value);
+                const weight = parseFloat(document.getElementById('weight').value);
+                const heightUnit = document.querySelector('input[name="heightUnit"]:checked').value;
+                const weightUnit = document.querySelector('input[name="weightUnit"]:checked').value;
+
+                // Convert height to cm if in feet
+                let heightInCm = heightUnit === 'ft' ? height * 30.48 : height;
+
+                // Convert weight to kg if in pounds
+                let weightInKg = weightUnit === 'lbs' ? weight * 0.453592 : weight;
+
+                // Calculate BMI
+                const bmi = weightInKg / ((heightInCm / 100) ** 2);
+
+                let meals = "";
+                let exercises = "";
+
+                // Determine recommendations based on BMI and height
+                if (bmi < 18.5) {
+                    meals = `
+                                <p><strong>Meals for Underweight:</strong></p>
+                                <ul>
+                                    <li>Breakfast: Avocado toast with eggs and nuts</li>
+
+                                    <li>Lunch: Quinoa salad with chickpeas and olive oil</li>
+
+                                    <li>Dinner: Stir-fried tofu with vegetables and brown rice</li>
+
+                                    <li>Snacks: Protein bars and smoothies</li>
+
+                                </ul>`;
+
+                    exercises = `
+                                <p><strong>Exercises for Underweight:</strong></p>
+                                <ul>
+                                    <li>Strength training: Focus on weight lifting to build muscle mass</li>
+                                    <li>Low-intensity cardio: Walking or cycling for overall fitness</li>
+                                </ul>`;
+
+                } else if (bmi >= 18.5 && bmi <= 24.9) {
+                    meals = `
+                                <p><strong>Meals for Normal Weight:</strong></p>
+                                <ul>
+                                    <li>Breakfast: Oatmeal with fruits and nuts</li>
+                                    <li>Lunch: Grilled chicken salad with mixed greens</li>
+                                    <li>Dinner: Baked salmon with quinoa and steamed broccoli</li>
+                                    <li>Snacks: Greek yogurt with honey and berries</li>
+                                </ul>`;
+
+                    exercises = `
+                                <p><strong>Exercises for Normal Weight:</strong></p>
+                                <ul>
+                                    <li>30 minutes of moderate cardio (jogging, cycling)</li>
+                                    <li>Strength training 2-3 times a week</li>
+                                </ul>`;
+
+                } else {
+                    meals = `
+                                <p><strong>Meals for Overweight:</strong></p>
+                                <ul>
+                                    <li>Breakfast: Smoothie with spinach, banana, and protein powder</li>
+                                    <li>Lunch: Grilled fish with steamed vegetables</li>
+                                    <li>Dinner: Lentil soup with a side salad</li>
+                                    <li>Snacks: Carrot sticks with hummus</li>
+                                </ul>`;
+
+                    exercises = `
+                                <p><strong>Exercises for Overweight:</strong></p>
+                                <ul>
+                                    <li>30-45 minutes of brisk walking or swimming</li>
+                                    <li>Strength training focusing on large muscle groups</li>
+                                </ul>`;
+                }
+
+                // Display results
+                document.getElementById('mealRecommendations').innerHTML = meals;
+                document.getElementById('exerciseRecommendations').innerHTML = exercises;
+
+                document.getElementById('result').style.display = 'block'; // Show results
+            }
+        </script>
+
+    </body>
+</html>
+

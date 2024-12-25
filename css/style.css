@@ -1,0 +1,382 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image:url(download.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.my-form {
+    width: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    margin: 4% auto 4%;
+    text-align:center;
+    border-radius: 10px;
+}
+
+.my-form h1 {
+    text-shadow: 2px 2px 4px #000000;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.input-box {
+    padding: 12px 40px;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: 10px -10px;
+    width: 100%;
+    border: 1px solid #999;
+    outline: none;
+}
+
+.input-box:hover {
+    transform: scale(1.02, 1.02);
+}
+
+button {
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.form-btn {
+    background-color: black;
+}
+
+.form-btn:hover {
+    color: #1c8abd;
+    font-weight: bold;
+    background-color: black;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-label {
+    float: left;
+    color: black;
+    text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    background-color: black;
+    top: 0;
+    /* position: sticky; */
+}
+
+/* li {
+    float: left;
+  } */
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #333;
+}
+
+.active {
+    background-color: #1c8abd;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* slots.css */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light blue-gray background */
+    color: #333; /* Dark text color for readability */
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content area */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Yoga Plan Section */
+.yoga-plan,
+.mental-health {
+    margin-bottom: 30px;
+    padding: 20px; /* Padding inside sections */
+    border-left: 5px solid #4caf50; /* Green accent for yoga section */
+}
+
+    .yoga-plan h2,
+    .mental-health h2 {
+        color: #4caf50; /* Green color for headings */
+        font-size: 24px; /* Larger font size for headings */
+    }
+
+    .yoga-plan p,
+    .mental-health p {
+        margin-bottom: 15px;
+    }
+
+    /* List Styling */
+    .yoga-plan ul {
+        list-style-type: disc; /* Bullet points for list items */
+        padding-left: 20px; /* Indentation for list */
+    }
+
+    .yoga-plan li {
+        margin-bottom: 5px; /* Space between list items */
+    }
+
+/* Button Styles */
+.button, button {
+    display: inline-block;
+    padding: 12px 25px; /* Increased padding for buttons */
+    margin-top: 10px;
+    color: white;
+    background-color: #ff5722; /* Vibrant orange button */
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    font-size: 16px; /* Font size for buttons */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+    .button:hover, button:hover {
+        background-color: #e64a19; /* Darker orange on hover */
+    }
+
+/* Form Styles */
+form {
+    margin-top: 20px;
+}
+
+    form label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    form input[type="text"],
+    form input[type="email"] {
+        width: calc(100% - 22px); /* Full width minus padding and border */
+        padding: 12px 12px 12px 40px; /* Padding for inputs */
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc; /* Light gray border for inputs */
+    }
+
+        form input[type="text"]:focus,
+        form input[type="email"]:focus {
+            border-color: #4caf50; /* Green border on focus for inputs */
+        }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .button, button {
+        width: calc(100% - 20px);
+        text-align: center;
+    }
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark text color for readability */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px; /* Maximum width of the container */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Padding around the content */
+    background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    position: relative; /* Positioning context for absolute elements */
+}
+
+    /* Background Image for the Form Container */
+    .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('fitness2.jpg'); /* Path to your background image */
+        background-size: cover; /* Cover the entire container */
+        opacity: 0.4; /* Adjust opacity for better text readability */
+        z-index: -1; /* Send it behind other content */
+    }
+/*for add to card containrs workout page*/
+h1 {
+    text-align: center; /* Center the heading */
+    color:beige; /* Blue color for the heading */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+.question {
+    margin-bottom: 15px; /* Space between questions */
+}
+
+label {
+    margin-bottom: 5px; /* Space below labels */
+}
+
+input[type="number"], input[type="radio"] {
+    padding: 10px; /* Padding inside input fields */
+    border-radius: 5px; /* Rounded corners for inputs */
+    border: 1px solid #ccc; /* Light gray border */
+}
+
+/* Button Styles */
+button {
+    padding: 10px;
+    background-color: #007bff; /* Blue background for button */
+    color: white; /* White text color for button */
+    border: none; /* No border for button */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+    button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+/* Result Styles */
+#result {
+    margin-top: 20px; /* Space above results section */
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #e7f3fe; /* Light blue background for results section */
+}
+
+/* Recommendation Styles */
+#mealRecommendations, #exerciseRecommendations {
+    margin-top: 15px;
+}
+/*container for yoga plan */
+.container {
+    max-width: 800px; /* Maximum width of the container */
+    margin: 20px auto; /* Center the container with some margin on top and bottom */
+    padding: 20px; /* Padding inside the container */
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.yoga-plan, .mental-health {
+    margin-bottom: 30px; /* Space between sections */
+    padding: 15px; /* Padding inside each section */
+    border: 1px solid #ddd; /* Light gray border around sections */
+    border-radius: 8px; /* Rounded corners for sections */
+}
+
+h2 {
+    font-size: 24px; /* Font size for section headings */
+    color: #333; /* Dark text color for headings */
+}
+
+p {
+    font-size: 16px; /* Font size for paragraphs */
+    line-height: 1.5; /* Line height for better readability */
+    color: beige; /* Slightly lighter text color for paragraphs */
+}
+
+ul {
+    list-style-type: disc; /* Bulleted list style */
+    padding-left: 20px; /* Indentation for list items */
+}
+
+button, .button {
+    display: inline-block;
+    background-color: #6200ea; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding around button text */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded corners for buttons */
+    font-size: 16px; /* Font size for button text */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+    .button:hover {
+        background-color: #3700b3; /* Darker shade on hover */
+    }
+
+/* Input styles for form elements */
+input[type="text"],
+input[type="email"] {
+    width: calc(100% - 22px); /* Full width minus padding/border */
+    padding: 10px; /* Padding inside input fields */
+    margin-top: 5px; /* Space above input fields */
+    margin-bottom: 15px; /* Space below input fields */
+    border-radius: 5px; /* Rounded corners for inputs */
+    border: 1px solid #ccc; /* Light gray border for inputs */
+}
