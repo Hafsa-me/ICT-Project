@@ -100,7 +100,9 @@
 <body>
     <div class="my-form">
         <h1>Contact Us</h1>
-        <form action="/submit" method="post">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="4881520b-2c18-4ad5-bfee-3465c2b85e13">
+
             <div class="font-awesome-library">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" class="input-box" placeholder="Enter Name">
@@ -115,6 +117,12 @@
                 <label for="phone">Phone Number</label>
                 <input type="text" id="phone" name="phone" class="input-box" placeholder="Enter Phone Number">
                 <i class="fa fa-phone fa-lg"></i>
+            </div>
+            <div class="font-awesome-library">
+                <label for="Comments">Comments</label>
+                <textarea id="comment" name="comment" rows="10" cols="40">
+           
+</textarea>
             </div>
             <button type="submit">Submit</button>
         </form>
